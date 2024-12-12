@@ -1,0 +1,125 @@
+.product-card {
+    flex: 0 0 250px;
+    border: 1px solid #c0c0c0; /* Light silver border */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .frame {
+    background-color: #e0e0e0; /* Light silver background for the frame */
+    padding: 15px; /* Creates the frame effect */
+    border-radius: 8px; /* Matches card design */
+  }
+  
+  .product-card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px; /* Height for the image container */
+    width: 100%; /* Full width for consistency */
+  }
+  
+  .product-card-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image fits perfectly */
+    border-radius: 5px; /* Optional: Slight rounding for image edges */
+    background-color: transparent; /* Ensures no extra background is added */
+  }
+  
+  .product-card-details {
+    padding: 10px;
+  }
+  
+  .product-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 10px 0;
+    height: 45px; /* Limit height for title */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product-price {
+    font-size: 1.2rem;
+    color: #ff3e3e;
+    margin-bottom: 10px;
+  }
+  
+  .original-price {
+    font-size: 1rem;
+    color: #aaa;
+    text-decoration: line-through;
+    margin-left: 10px;
+  }
+  
+  .buy-now-button {
+    background-color: black;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .buy-now-button:hover {
+    background-color: #333;
+  }
+  
+  .product-rating {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .product-rating .star {
+    color: #ffcc00; /* Yellow color for stars */
+  }
+  
+  .product-rating .star:nth-child(5) {
+    color: #ddd; /* Grey color for the last star */
+  }
+  
+  .discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f44336;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+  }
+  
+  .icon-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .wishlist-btn,
+  .view-btn {
+    background: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

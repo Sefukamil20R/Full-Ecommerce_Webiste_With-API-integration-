@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #333;
+    color: white;
+    width: 100vw; /* Full width of the browser */
+    box-sizing: border-box; /* Prevents padding overflow */
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 0 15px;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-bar input {
+    padding: 8px;
+    width: 70%;
+    margin-right: 5px;
+  }
+  .subscribe-bar {
+    position: relative; /* Position the input and icon together */
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-bar input {
+    padding: 8px;
+    padding-right: 30px; /* Add space for the icon */
+    width: 100%; /* Ensure it spans the column width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.subscribe-bar input::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+.subscribe-bar .send-icon {
+    position: absolute;
+    right: 10px; /* Position the icon inside the input */
+    color: #333;
+    cursor: pointer;
+}
+
+  
+  .social-icons svg {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  

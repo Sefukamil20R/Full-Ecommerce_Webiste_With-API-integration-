@@ -1,0 +1,103 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  width: 100vw; /* Full width of the browser */
+  box-sizing: border-box; /* Prevents padding overflow */
+  margin: 0 auto; /* Centers the navbar horizontally */
+  max-width: 1200px;
+}
+
+.navbar-left h1 {
+  font-size: 24px;
+}
+
+.navbar-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adds spacing between items */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative; /* Helps position the icon */
+}
+
+.search-bar input {
+  padding: 8px;
+  padding-right: 30px; /* Adds space for the search icon */
+  border: 1px solid #D3D3D380;
+
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #aaa; /* Placeholder color */
+}
+
+.search-bar svg {
+  position: absolute;
+  right: 10px; /* Positions the icon inside the input field */
+  color: #333;
+  cursor: pointer;
+}
+
+.icon {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  position: relative; /* For positioning the cart count */
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.profile-icon {
+  position: relative; /* Helps position the dropdown menu */
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px; /* Adjusts dropdown placement */
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f8f8f8;
+}
