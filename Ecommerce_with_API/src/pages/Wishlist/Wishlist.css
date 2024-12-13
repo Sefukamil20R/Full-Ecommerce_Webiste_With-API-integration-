@@ -1,0 +1,66 @@
+.wishlist-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 60px;
+  }
+  
+  .wishlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .move-to-blog-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .flash-sales-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  .flash-sales-left {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin: 30px;
+  }
+  .uff
+  {
+    display: flex;
+    align-items: center;
+  }
+  .flash-sales-icon {
+    width: 20px;
+    height: 34px;
+    background-color: #f45b5b;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .flash-sales-today {
+    font-size: 12px;
+    color: #f45b5b;
+    margin: 0;
+  }
+  
+  .flash-sales-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+  }

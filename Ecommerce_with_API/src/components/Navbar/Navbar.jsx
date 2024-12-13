@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useWishlist } from "../../WishlistContext"; // Adjust the import path as needed
+import { useCart } from "../../Cartcontext"; // Adjust the import path as needed
 import './Navbar.css';
 import { FaSearch, FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 
 const Navbar = () => {
-  const [cartCount, setCartCount] = useState(0);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const { wishlist } = useWishlist();
+  const { cart } = useCart();
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    setCartCount(cart.reduce((acc, item) => acc + item.quantity, 0));
+  }, [cart]);
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -27,12 +35,12 @@ const Navbar = () => {
           <input type="text" placeholder="What are you looking for?" />
           <FaSearch />
         </div>
-        <FaHeart className="icon" />
+        <Link to="/wishlist">
+          <FaHeart className="icon" />
+          {wishlist.length > 0 && <span className="wishlist-count">{wishlist.length}</span>}
+        </Link>
         <div className="cart-icon">
-          {/* Add a Link wrapper to the cart icon */}
           <Link to="/CartPage">
-
-
             <FaShoppingCart />
             {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </Link>
@@ -41,7 +49,7 @@ const Navbar = () => {
           <FaUser />
           {dropdownOpen && (
             <div className="dropdown-menu">
-              <Link to="/my-account">Manage My Account</Link>
+              <Link to="/profile">Manage My Account</Link>
               <Link to="/my-orders">My Orders</Link>
               <Link to="/my-cancellations">My Cancellations</Link>
               <Link to="/my-reviews">My Reviews</Link>

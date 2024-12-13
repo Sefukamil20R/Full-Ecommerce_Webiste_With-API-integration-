@@ -59,8 +59,21 @@
   .flash-sales-left {
     display: flex;
     align-items: center;
+    
   }
-  
+  .flash-sales-lefta
+  {
+    display: flex;
+    align-items: flex-start;
+
+  }
+  .flash-sales-icona {
+    width: 20px;
+    height: 34px;
+    background-color: #f45b5b;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
   .flash-sales-icon {
     width: 20px;
     height: 34px;

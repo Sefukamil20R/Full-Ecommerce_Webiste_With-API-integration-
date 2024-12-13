@@ -46,18 +46,43 @@
 // };
 
 // export default ProductCard;
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useWishlist } from "../../WishlistContext"; // Adjust the import path as needed
+import { useCart } from "../../Cartcontext"; // Adjust the import path as needed
 import "./ProductCard.css";
 
-const ProductCard = ({ product, onAddToCart }) => {
+const ProductCard = ({ product }) => {
+  const navigate = useNavigate();
+  const { addToWishlist } = useWishlist();
+  const { addToCart } = useCart();
+  const [showWishlistPopup, setShowWishlistPopup] = useState(false);
+  const [showCartPopup, setShowCartPopup] = useState(false);
+
+  const handleAddToWishlist = () => {
+    addToWishlist(product);
+    setShowWishlistPopup(true);
+    setTimeout(() => setShowWishlistPopup(false), 2000); // Hide popup after 2 seconds
+  };
+
+  const handleAddToCart = () => {
+    addToCart(product);
+    setShowCartPopup(true);
+    setTimeout(() => setShowCartPopup(false), 2000); // Hide popup after 2 seconds
+  };
+
+  const handleProductClick = () => {
+    navigate(`/product/${product.id}`, { state: { product } });
+  };
+
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={handleProductClick}>
       <div className="frame">
         <div className="discount-badge">-35%</div>
 
         <div className="icon-buttons">
-          <button className="wishlist-btn">♥</button>
-          <button className="view-btn">👁</button>
+          <button className="wishlist-btn" onClick={(e) => { e.stopPropagation(); handleAddToWishlist(); }}>♥</button>
+          <button className="view-btn" onClick={(e) => e.stopPropagation()}>👁</button>
         </div>
 
         <div className="product-card-image">
@@ -68,7 +93,7 @@ const ProductCard = ({ product, onAddToCart }) => {
       {/* Add to Cart Button */}
       <button
         className="buy-now-button"
-        onClick={() => onAddToCart(product)}
+        onClick={(e) => { e.stopPropagation(); handleAddToCart(); }}
       >
         Add To Cart
       </button>
@@ -89,6 +114,9 @@ const ProductCard = ({ product, onAddToCart }) => {
           <span className="star">☆</span> <span>(75)</span>
         </div>
       </div>
+
+      {showWishlistPopup && <div className="wishlist-popup">Added to Wishlist!</div>}
+      {showCartPopup && <div className="cart-popup">Added to Cart!</div>}
     </div>
   );
 };

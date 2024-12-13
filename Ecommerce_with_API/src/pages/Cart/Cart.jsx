@@ -154,7 +154,7 @@ const CartPage = () => {
 
       {/* Actions Section */}
       <div className="actions-container">
-        <button className="btn-back">Return to Shop</button>
+        <button className="btn-back "onClick={() => window.location.href = '/'}>Return to Shop</button>
         <button className="btn-update">Update Cart</button>
       </div>
 

@@ -1,0 +1,155 @@
+.product-details-page {
+    padding: 20px;
+    font-family: Arial, sans-serif; 
+    margin:60px;
+  }
+  
+  .product-details-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Left Section: Product Images */
+  .product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .thumbnail-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .thumbnail-images img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .main-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Right Section: Product Info */
+  .product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .product-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .star {
+    color: #ffcc00;
+    font-size: 18px;
+  }
+  
+  .review-count {
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .product-price {
+    font-size: 22px;
+    color: #ff3e3e;
+    font-weight: bold;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .product-colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .color-option {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* Quantity Selector and Buttons */
+  .action-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .quantity-selector button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .quantity-selector input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .buy-now-button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delivery-info {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Related Items */
+  .related-items {
+    margin-top: 40px;
+  }
+  
+  .related-items h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .related-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }

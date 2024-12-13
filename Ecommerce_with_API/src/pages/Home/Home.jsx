@@ -613,7 +613,7 @@ const Home = () => {
         </div>
       </div>
       <div className="view-all-container">
-        <button className="view-all-button">View All Products</button>
+        <button className="view-all-button" >View All Products</button>
       </div>
       <hr />
       <div className="flash-sales-section">
@@ -652,12 +652,13 @@ const Home = () => {
    
     {selectedCategory && (
       <div>
-        <div className="flash-sales-left" style={{marginLeft : '60px'}}>
+        {/* <div className="flash-sales-left" style={{marginLeft : '60px'}}>
           <div className="flash-sales-icon" style={{backgroundColor : 'green'}}></div>
           <div>
             <p className="flash-sales-today" style={{color:"green" , fontWeight :'bold'}}>Available</p>
           </div>
-        </div>
+        </div> */}
+        
         <div className="category-header">
           <h2 className="category-name">{selectedCategory}</h2>
           <button className="view-all-button" onClick={handleViewAllClick}>
@@ -679,15 +680,15 @@ const Home = () => {
           ))}
         </div>
       ) : (
-        <p className="no-products-message">Select a category to view products.</p>
+        <p className="no-products-message" style = {{color:'red'}}>Select a category to view products.</p>
       )}
     </div>
-    <section class="isec">
-      <img src= {back2} alt="Descriptive Alt Text" class="s-image" />
+    <section className="isec">
+      <img src= {back2} alt="Descriptive Alt Text" className="s-image" />
     </section>
-    <div className="flash-sales-left" style = {{margin : '20px 60px'}}>
-      <div className="flash-sales-icon"></div>
-      <div>
+    <div className="flash-sales-lefta" style = {{margin : '20px 60px'}}>
+      <div className="flash-sales-icona"></div>
+      <div  className="inita">
         <p className="flash-sales-today">our products </p>
         <h2 className="flash-sales-title">Explore our Products</h2>
       </div>
@@ -708,9 +709,9 @@ const Home = () => {
         </button>
       </div>
     )}
-    <div className="flash-sales-left" style = {{margin : '20px 60px'}}>
-      <div className="flash-sales-icon"></div>
-      <div>
+    <div className="flash-sales-lefta" style = {{margin : '20px 60px'}}>
+      <div className="flash-sales-icona"></div>
+      <div  className="inita">
         <p className="flash-sales-today">Featured </p>
         <h2 className="flash-sales-title">New Arrival</h2>
       </div>
@@ -761,7 +762,6 @@ const Home = () => {
         <h3>MONEY BACK GUARANTEE</h3>
         <p>We return money within 30 days</p>
       </div>
-      <Link to="/login">Log in</Link>
     </div>
   </div>
   );
