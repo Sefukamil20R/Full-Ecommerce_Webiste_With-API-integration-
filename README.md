@@ -103,7 +103,7 @@ Access the live version of the project here: https://eccomerce-with-api.netlify.
 
 
 ---
-
+Deployed url : https://eccomerce-with-api.netlify.app/
 ### 🌟 **Thank You for Visiting!**
 We hope you enjoy exploring the features of this e-commerce application. If you have any feedback, feel free to reach out!
 
